@@ -6,7 +6,7 @@ jobs:
   determine-if-deploy:
     runs-on: ubuntu-latest
     outputs:
-      deploy: ${{ steps.tag_exists.outputs.exists }}
+      deploy: ${{ steps.tag_exists.outputs.exists }} == 'false'
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4.4.0
@@ -27,6 +27,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: determine-if-deploy
-    if: needs.determine-if-deploy.outputs.deploy == 'false'
+    if: needs.determine-if-deploy.outputs.deploy
     steps:
     - run: echo "Deploying!"
