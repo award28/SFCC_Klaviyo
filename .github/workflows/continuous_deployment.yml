@@ -17,7 +17,7 @@ jobs:
     - name: Get Latest Version
       id: latest_version
       run: |
-        VERSION=$(changelogger manage version --latest)
+        VERSION=$(changelogger manage versions --latest)
         echo "version=${VERSION}" >> $GITHUB_OUTPUT
     - uses: mukunku/tag-exists-action@v1.2.0
       id: tag_exists
