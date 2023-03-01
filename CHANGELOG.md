@@ -10,6 +10,8 @@ bumped for multiple releases during one month.
 <!-- BEGIN RELEASE NOTES -->
 ### [Unreleased]
 
+### [21.11.0] - 2023-03-01
+
 #### Added
 
 - Added pre-commit to the repository and ran across all files
